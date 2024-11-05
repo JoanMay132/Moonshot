@@ -6,16 +6,21 @@
 //
 
 import SwiftUI
-
+// Day 39 - Resizing images to fit the available space
 struct ResizingImages: View {
     var body: some View {
         Image(.example)
             .resizable()
+//          .scaledToFill()
             .scaledToFit()
-            .containerRelativeFrame(Axis.Set.horizontal) { size, axis in
+//            .frame(width: 300, height: 300)
+        // Setting a container relative to the image
+            .containerRelativeFrame(.horizontal) { size, axis in
                 size * 0.8
-                
             }
+            
+        
+  
     }
 }
 
